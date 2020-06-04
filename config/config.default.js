@@ -17,7 +17,7 @@ module.exports = appInfo => {
     },
   };
   exports.mongoose = {
-    url: 'mongodb://127.0.0.1:27017/mongoTest',
+    url: 'mongodb://127.0.0.1:27017/baixing',
     // 链接到本地的MongoDB，mongoTest是我本地数据库的名字，根据自己数据库名字进行填写即可
     options: {},
   };
