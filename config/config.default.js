@@ -1,6 +1,8 @@
 // 引入egg-mongoose
 const mongoose = require('mongoose');
 module.exports = appInfo => {
+
+
   const config = exports = {
     security: {
       csrf: {
@@ -8,6 +10,13 @@ module.exports = appInfo => {
       }
     }
   };
+  config.cluster = {
+    listen: {
+      path: '',
+      port: 7002,
+      hostname: '0.0.0.0',
+    }
+};
   config.keys = appInfo.name + '_1539588102822_7832'; // 此处的字符是自己设定的cookie加密码
   // 添加 view 配置，nunjucks是一个用来在服务器端渲染HTML的插件，用npm 安装即可
   exports.view = {
